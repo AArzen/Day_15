@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hair Salon</title>
+
+    <link href="static/css/Bootstrap/css/bootstrap.css" rel="stylesheet">
+    <script src="static/js/Bootstrap/js/bootstrap.js"></script>
+
+</head>
+<body>
+
+<!-- Main Frame -->
+<!--<div class="container-fluid"> -->
+    <div class="container">
+
+
+
+    <!-- Navigation bar -->
+    <div class="row">
+        <div class="col">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="/">
+                    <img src="https://media.easy.co.il/images/UserThumbs/10117832_1677746660573.png" width="30"
+                         height="30" class="d-inline-block align-top" alt="">
+                    Hans Manly care
+                </a>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#services">Our services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#appointment">Make and appointment</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#FAQ">FAQ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="modal" data-bs-target="#ModalAbout">About us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Home</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </nav>
+        </div>
+    </div>
+
+
+
+    <!-- Pictures -->
+    <div class="row justify-content-md-center pt-5">
+
+        <div id="carouselControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://jaxsonmaximus.com/wp-content/uploads/2022/12/The-Best-Mens-Haircut-in-2023-For-Any-Hair-Type-.jpg"
+                         class="d-block w-100" alt="">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://onpointfresh.com/wp-content/uploads/2019/03/Best-Mens-Hairstyles.-1.png"
+                         class="d-block w-100" alt="">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://beardstyle.net/wp-content/uploads/2018/07/mustache-and-beard-3.jpg"
+                         class="d-block w-100" alt="">
+                </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselControls"
+                    data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselControls"
+                    data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+
+
+    <!-- Our Services -->
+    <div class="row pt-5" id="services">
+        <div class="col align-self-center">
+            <p class="fs-1">Our Services</p>
+
+            <div class="row">
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="https://i.pinimg.com/550x/f4/30/de/f430decb9bcbb2cb1af6ac9d2010e9b3.jpg"
+                             class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">Hair styling</h5>
+                            <p class="card-text">Life is too short to have boring hair.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="data:image/jpeg;base64,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"
+                             class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">Dye your hair</h5>
+                            <p class="card-text">You know you've made it when you can dye your hair blue.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="https://images.ctfassets.net/318t4e73nih6/31Xk29H6jeOQAe2o6gSEEm/ec9954192d509cf5da0d8015b080d365/avc_braun_beard-styles-for-modern-men_oblong.jpg?fm=webp&w=710"
+                             class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">Beard styling</h5>
+                            <p class="card-text">Get your face a gift, grow a beard.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Make an appointment -->
+    <div class="row pt-5" id="appointment">
+
+        <div class="col align-self-center">
+            <h2>Make an appointment</h2>
+
+            <div class="row">
+
+                <div class="col">
+                    <form>
+                        <div class="form-group row">
+                            <label for="inputFirstLastName" class="col-sm-2 col-form-label">First and last
+                                name</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="inputFirstLastName">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="inputPhone" class="col-sm-2 col-form-label">Phone number</label>
+                            <div class="col-sm-10">
+                                <input type="tel" class="form-control" id="inputPhone">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="inputDate" class="col-sm-2 col-form-label">Date</label>
+                            <div class="col-sm-10">
+                                <input type="datetime-local" class="form-control" id="inputDate">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <textarea class="form-control" id="inputTextarea" rows="3"
+                                      placeholder="Other info (haircut wishes etc.)"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="gridCheck">
+                                <label class="form-check-label" for="gridCheck">
+                                    I agree that Hans is the best friseur
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-sm-10">
+                                <button type="submit" class="btn btn-primary">Send</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Working hours -->
+                <div class="col">
+                    <table class="table table-striped table-bordered table-hover">
+                        <thead class="table-primary">
+                        <tr>
+                            <th scope="col">Day</th>
+                            <th scope="col">Working hours</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Monday</td>
+                            <td>8.00-16.00</td>
+                        </tr>
+                        <tr>
+                            <td>Tuesday</td>
+                            <td>10.00-18.00</td>
+                        </tr>
+                        <tr>
+                            <td>Wednesday</td>
+                            <td>8.00-16.00</td>
+                        </tr>
+                        <tr>
+                            <td>Thursday</td>
+                            <td>8.00-16.00</td>
+                        </tr>
+                        <tr>
+                            <td>Friday</td>
+                            <td>12.00-20.00</td>
+                        </tr>
+                        <tr>
+                            <td>Saturday</td>
+                            <td>8.00-16.00</td>
+                        </tr>
+                        <tr>
+                            <td>Sunday</td>
+                            <td>8.00-12.00</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <h6>* We don't work on holidays</h6>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- FAQ -->
+        <div class="row pt-5" id="FAQ">
+            <div class="col">
+                <h2>FAQ (Frequently asked questions)</h2>
+
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="false"
+                                    aria-controls="collapseOne">
+                                Do you have gift certificates?
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show"
+                             aria-labelledby="headingOne"
+                             data-bs-parent="#accordion">
+                            <div class="accordion-body">
+                                Gift certificates are available for purchase in the salon or over the phone. If
+                                you
+                                purchase a gift certificate over the phone, we can either mail it to your lucky
+                                recipient or simply
+                                keep it in our files. Elixir salon gift certificates are not redeemable for cash
+                                or
+                                refundable.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo" aria-expanded="false"
+                                    aria-controls="collapseTwo">
+                                Can I bring my pet dog along?
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                             data-bs-parent="#accordion">
+                            <div class="accordion-body">
+                                Sure you can bring your dog with you.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseThree" aria-expanded="false"
+                                    aria-controls="collapseThree">
+                                What awards did you receive so far?
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse"
+                             aria-labelledby="headingThree"
+                             data-bs-parent="#accordion">
+                            <div class="accordion-body">
+                                We have no awards yet.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- About us -->
+        <div class="row pt-5 row-cols-3">
+
+            <div class="col" id="about">
+                <div class="row"><h4>Contact</h4></div>
+                <div class="row"><h6>Friseur Hans GmbH</h6></div>
+                <div class="row"><h6>Tax number: 324324234</h6></div>
+                <div class="row"><h6>Friseurgasse 5, 1020 Wien</h6></div>
+                <div class="row"><h6>Phone: 0668/345435346</h6></div>
+                <div class="row"><h6>Email: friseur.hans@f-hans.com</h6></div>
+            </div>
+
+            <div class="col">
+                <img src="https://media.easy.co.il/images/UserThumbs/10117832_1677746660573.png"
+                     class="d-inline-block align-top" alt="">
+            </div>
+
+            <div class="col">
+                <div class="row"><h4>Navigation</h4></div>
+                <div class="row">
+                    <a href="#services">
+                        <button type="button" class="btn btn-link">Our services</button>
+                    </a>
+                </div>
+                <div class="row">
+                    <a href="#appointment">
+                        <button type="button" class="btn btn-link">Make an appointment</button>
+                    </a>
+                </div>
+                <div class="row">
+                    <a href="#FAQ">
+                        <button type="button" class="btn btn-link">FAQ</button>
+                    </a>
+                </div>
+                <div class="row">
+                    <a href="#">
+                        <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#ModalAbout">
+                            About us
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="ModalAbout" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="ModalLabel">About Us</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                At Hans Hairsalon we are passionate about meeting the unique needs of our clients and creating a style
+                that highlights their natural beauty. We Create a perfect style by listening to our client's desires,
+                whether they are a business r professional or someone whu wants to sport the trendiest styles.
+                <img src="https://media.easy.co.il/images/UserThumbs/10117832_1677746660573.png"
+                     class="rounded mx-auto d-block" alt="">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

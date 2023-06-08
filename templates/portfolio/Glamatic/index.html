@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Glamatic</title>
+
+    <link rel="stylesheet" href="static/css/portfolio/Glamatic/mystyle.css">
+</head>
+<body>
+
+
+
+<div id="container">
+    <div id="header">
+        <div class="title1"><img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZZFPzHdW6XFQYxiBZswDG5kgVSgTZ67g-lsUXfUospvuO3y_oI4bAWRJgiF68ukPyNig&usqp=CAU"
+                alt="GLAMATIC_IMAGE"></div>
+        <div class="title2">Motor and Robot commissioning</div>
+        <div class="title2"><a href="/">Home</a></div>
+        <div class="DateNow">12:00:00 PM</div>
+    </div>
+
+    <ul>
+        <li>
+            Glamatic is a robotic arm inspired by the Glambot. With Glamatic and its various effects, you can create stunning video content.
+        </li>
+        <li>
+            The Robotic arm is attached to a linear motion, which allows more freedom, up to 2m/6,5ft reach! It is fully automated with preset programs and controlled by Touchpix GlambotApp.
+        </li>
+        <li>
+            The videos are easily shared without an internet connection with a built-in Sharing box for internet-free sharing content and flawless events
+        </li>
+    </ul>
+
+    <h3>Auto control</h3>
+    <table class="Table">
+        <tr>
+            <th title="0 - 64">Program number
+            </th>
+            <th>
+                <input size="4" type="text" min="0" max="64" class="Field" enable value=0>
+            </th>
+        </tr>
+        <tr>
+            <th title="ON=Run ON, OFF=Run OFF">Run Program
+            </th>
+            <th class="switch"><span class="slider round"></span><input type="checkbox"/>
+            </th>
+        </tr>
+    </table>
+</div>
+
+
+
+<h3>Manual control - Motor</h3>
+<table class="Table">
+    <tr>
+        <th align="left" style="text-align:justify" title="ON=Manual ON, OFF=Manual OFF">Manual
+        </th>
+        <th class="switch"><span class="slider round"></span><input type="checkbox"/>
+        </th>
+    </tr>
+    <tr>
+        <th align="left" style="text-align:justify">Enable
+        </th>
+        <th class="switch"><span class="slider round"></span><input type="checkbox"/>
+        </th>
+    </tr>
+    <tr>
+        <th align="left" style="text-align:justify" title="ON=Homing ON, OFF=Homing OFF">Execute homing
+        </th>
+        <th class="switch"><span class="slider round"></span><input type="checkbox"/>
+        </th>
+    </tr>
+    <tr>
+        <th align="left" title="70.0 - 100.0">Velocety [mm/s]
+        </th>
+        <th>
+            <input size="4" type="text" min="70.0" max="100.0" class="Field" enable value="0.0"/>
+        </th>
+    </tr>
+    <tr>
+        <th align="left" title="-1000.0 - 1000.0">Position [mm]
+        </th>
+        <th>
+            <input size="4" type="text" min="0.0" max="1000.0" class="Field" enable value="0.0"/>
+        </th>
+    </tr>
+    <tr>
+        <th align="left" style="text-align:justify" title="ON=Execute move ON, OFF=Execute move off">
+            Execute move
+        </th>
+        <th class="switch"><span class="slider round"></span><input type="checkbox"/>
+        </th>
+    </tr>
+    <tr>
+        <th align="left" style="text-align:justify" title="ON=Reset ON, OFF=Reset off">Reset Error
+        </th>
+        <th class="switch"><span class="slider round"></span><input type="checkbox" enable value=/>
+        </th>
+    </tr>
+</table>
+
+
+<h3>Monitoring - Motor</h3>
+<table class="Table">
+    <tr>
+        <th>Homed:
+        </th>
+        <th style="width:100px">No
+        </th>
+    </tr>
+    <tr>
+        <th>Error:
+        </th>
+        <th style="width:100px">No
+        </th>
+    </tr>
+    <tr>
+        <th>Current Position:
+        </th>
+        <th style="width:100px">0.0
+        </th>
+    </tr>
+</table>
+
+
+<h3>Monitoring - Robot</h3>
+<table class="Table">
+    <tr>
+        <th>Error:
+        </th>
+        <th style="width:100px">No
+        </th>
+    </tr>
+    <tr>
+        <th>Offline task runing:
+        </th>
+        <th style="width:100px">No
+        </th>
+    </tr>
+</table>
+</body>
+</html>
