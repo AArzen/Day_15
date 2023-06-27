@@ -1,11 +1,59 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Hello</title>
-</head>
-<body>
+
+{% extends "portfolio/base.html" %}
+
+{% block title %}
+Hello
+{% endblock title %}
+
+{% block body %}
+
 <h1>Hello</h1>
+<p>My name is {{ user_name }}</p>
+<p>Today is is {{ todays_day }}</p>
 <a href="/">Home</a>
-</body>
-</html>
+
+<h4>Send your comments here:</h4>
+<form method="post" action="/save-data">
+    <div>
+        <label>Name</label>
+        <input type="text" name="name" id="name">
+    </div>
+    <div>
+        <label>Email</label>
+        <input type="email" name="email" id="email">
+    </div>
+    <div>
+        <label>Comment</label>
+        <textarea name="message"></textarea>
+    </div>
+    <div>
+        <button type="submit">Submit</button>
+        <button type="reset">Clear data</button>
+    </div>
+</form>
+
+<form method="post" action="/hello">
+    <div>
+        <label>Name</label>
+        <input type="text" name="name" id="name1">
+    </div>
+    <div>
+        <label>Email</label>
+        <input type="email" name="email" id="email1">
+    </div>
+    <div>
+        <label>Comment</label>
+        <textarea name="message"></textarea>
+    </div>
+    <div>
+        <button type="submit">Submit</button>
+        <button type="reset">Clear data</button>
+    </div>
+</form>
+
+<form method="post" action="/delete-me" >
+    <input type="hidden" value="123123">
+    <button type="submit">Delete</button>
+</form>
+
+{% endblock body %}
